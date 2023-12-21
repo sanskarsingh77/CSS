@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            height: 100px;
+            width: 200px;
+            border: 1px solid black;
+            background-color: blueviolet;
+            margin: 10px;
+            /* 2 div ke ya 2elements ke border ke beech me space chaiye to hum margin tag ka use krte hai */
+            /* agar hum margin left ya margin right ya margin bottom ya margin top us krde to right use kiya to right se margin ho jayenga agar left se kiya to left se ho jayega margin aise hi top aur bottom ka hoga */
+            padding: 25px ;
+            box-sizing: border-box;
+            /* content aur border ke beech ke space ko padding kehte hai */
+            /* padding bhi hum specific de sakte hai right left ya top ya botttom  */
+            /* PADDING ADD KRNE KE BAAD SIZE BADH GYA BLOCK KA BOX-SIZZING:BORDER -BOX AGAR USE KRTE HAI TO BLOCK KA SIZE NHI BADHTA PADDING USE KRNE PAR */
+        }   
+        #org{
+            background-color: #67feff;
+            /* the hexadecimal number specifies the color */
+        }
+        #wht{
+            background-color: rgba(0, 0, 0, 0.596);
+            /* the rgb number specifies the balck color  last vala jo point me value ayi hai use opacity kehte hai*/
+        }
+        #grn{
+            background-color: green;
+             /* PREDEFINED COLOR NAMES */
+        }
+        /*COLORS IN CSS  */
+        /* 1-> HEXADECIMAL COLORS- A HEXADECIMAL COLOR IS SPECIFIED WITH #RRGGBB WHERE RR IS RED AND GG IS GREEN AND BB IS BLUE HEXADECIMAL INTEGER SPECIFY THWE COMPONENT OF THE COLOR ALL VALUES MUST BE BETWEEN 00 AND FF 
+        FOR EX #OOOOFF IS RENDERED AS BLUE*/
+        /* 2-> RGB COLOR- THE RGB color specified with the rgb() function which hs thevfollowing syntax rgb(red,gree,blue)
+        each parameter (red ,green,blue) defines the intensity of the color an d can be an integer between 0 and 255 or a percentage value (from 0% to 100%
+         for ex thw rgb(0,0,225) is rendered as blue , because the blue paarmayter is set to its highest value (255) and the others are set at 0/*   
+        /* 3-> PREDEFINED/ CROSS -BROWSER COLOR NAMES-
+        140 COOR NAMES ARE PREDEFINED IN HTML AND CSS COLOR SPECIFICATION  */
+         @font-face { 
+            font-family: myfirstfont;
+            src: url(sansation_light.woff);
+            /* font face use krne se external font ko add kr sakte hai jo hume pasand ho google yaa kahi se */
+        } 
+        
+        </style>
+
+</head>
+<body>
+    <div class="box" id="org">Asdkjvwe</div>
+    <div class="box" id="wht">Bdfawsrgwr</div>
+    <div class="box" id="grn">Cdsfcazrg</div>
+</body>
+</html>
