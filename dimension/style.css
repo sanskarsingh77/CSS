@@ -1,0 +1,22 @@
+.box{
+    max-height: 100px;
+    /* max height se jada content hoga rto overfloe ho jayega  */
+    border: 1px solid black;
+    overflow: scroll; 
+    /* overflow jo ho rha tha usse bachne ke liye overfloew attribute use kiya hai */
+}
+.mydiv{
+    margin :10px;
+    min-height: 100px;
+    /*   agar mera  content minimum height se bada hai to humara block ya container apne aap bada ho  jayega aur adjust kr lega  */
+    border: 1px solid black;
+
+}
+#div1{
+    height: 50px;
+    border: 1px solid black;
+    overflow: visible ;
+    /* extra content hoga vo bahar visible ho jayga visible use krne se */
+    /* extra content dikhe ga hi hi agar hum hidden use krenge  */
+    /* aUR AGAR hum scroll use krnege to scroll ho jayega extra conntent */
+}
