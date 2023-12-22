@@ -1,0 +1,38 @@
+.box{
+    border: 1px solid black;
+    height: 200px;
+    width: 150px;
+    background-image: linear-gradient(red,blue); 
+    /* the  default transition of color is from top to bottom
+    if you want transition from right ot left write to left in linear gradient 
+    if you want trannsition o f color from left to right write to right
+    if you wanr it from bottom to top write to top 
+    and if yoou want it diagonlly transition from top left to bottom right write to bottom right*/
+     background-image: linear-gradient(to right, red,blue);
+    background-image: linear-gradient(to left, red,blue);
+    background-image: linear-gradient(to top, red,blue); 
+    background-image: linear-gradient(to bottom right, red,blue,green);
+    background-image: linear-gradient(45deg,red,green);
+    /* you can also use angles like above*/
+      background-image: linear-gradient(to bottom,rgba(255,0,0,0),rgba(0,0,255,1));
+    /* you can transperancy shown in above */
+    /* hamesa sabse last vali stement prioritise hogi */
+    } 
+    .mydiv{
+      border: 1px solid black;
+      height: 300px ;
+      width: 150px;
+      margin: 10px;
+      background-image: radial-gradient(circle,red,blue ,green);
+    /* a radial gradient is defined by its center to create a radial gradient you must also define at least two color stops
+    syntax-  background-image: radial-gradient(shape size at position,start color,...,last color); 
+    you can use spacing of colors//set predefined shapes/repeating gradient */
+  }
+  .div2{
+    border: 1px solid black;
+    height: 300px;
+    width: 150px;
+    margin: 10px;
+    background-image: conic-gradient(red,yellow,pink);
+    background-image: conic-gradient(red, yellow, green);
+  }
