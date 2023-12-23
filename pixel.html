@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+<style>
+    #div1{
+        background-color: blue;
+        height: 100px;
+        width: 500px;
+        }
+        #div2{
+            background-color: blueviolet;
+            width: 10%;
+            height:10%;
+            /* isko percentage unit kehte hai */
+            /* yaha pe width humne 10% rakhi iska mtlb yeh hai ke iski width iske parent element ke width ki 10% hogi  */
+         margin: 10px;
+         padding: 10px;
+         }
+        /* relative unit to font size
+        ->em- reletae to parent tag font size
+        -> rem- relative to root tag font size root element html tah hota hai uska default size 16px hota ha☻i
+          */
+          /* relative unit to  viewport -jitna areea displayt me visible hota hai usse viewport kehte hai
+        1-vw-is 1/100 *width of viewport
+        2-vh-1/100 *height of viewport
+                       */
+                       #firstpara{
+                        background-color: chartreuse;
+                       }
+</style>
+</head>
+<body>
+    <!-- <div id="div1">
+        <div id="div2" ></div> 
+    </div> -->
+<p id="firstpara">this is a paragraph</p>
+</body>
+</html>
