@@ -1,0 +1,104 @@
+/* (*) is a universal selector universal selector har element pe kaam krega */
+*{
+    /* margin: 0;
+    padding: 0; */
+    box-sizing: border-box;
+}
+ 
+.container{
+    height: 500px;
+    border: 1px solid green;
+    display: flex;
+    /* flex-direction: column ; */
+    /* by default main axis ka direcxtion horizonatal hota hai agar usko vertical krna hai to humko flrx direction column krna hoga */
+    /* flex-direction: column-reverse; */
+    /* flex-wrap: wrap; */
+    /* agar hame flex items ki width ko preserve krna hai to hume flex wrap use krna hoga        */
+    /* wrap me element squezz kkrne me next line me jaata hai */
+    /* wrap reverse me element squeze krne pe upar jata hai */
+    /* flex wrap me wrap use krne se agar hum squeeze krte hai to  width inact ho jate hai  */
+
+ flex-flow: column , wrap;
+ /* flex flow use kene se hum flex direction aur flex wrap ek sath use kr sakte hai */
+  /* justify-content: flex-start; */
+  /* flex start se saari elements left side ajaynge  */
+    /* justify-content: flex-end; */
+    /*flex end se saari elements righr  side se start  ho jayenge   */
+    /* justify-content: center; */
+    /* center se saari elements center me ajaynge   */
+    /* justify-content:space-between ; */
+    /* isme saare element ke beech me same space ho jayegi aur first aur last element  parent container se chipak ke khade hojayenge*/
+    /* justify-content: space-around; */
+    /* isme sare element me space equal rhega lekin first aur last element aur parent container ka sppace equal nhi hoga sabse aur sabke beech 
+    me space equal krne ke liye hum space evenly use krnege    */
+    /* justify-content: space-evenly; */
+    /* justify content main axis pe apply hoti hai element ko main axis me alingn krrta hai */
+
+
+    /* align-items:flex-start;   */
+    /* flex start me saari elment vertical axis ke starting me palce ho jayengi  */
+    /* align-items: flex-end; */
+    /*flex end me saari elment vertical axis ke end me palce ho jayengi  */
+    /* align-items: center; */
+    /* flex center me saari elment vertical axis ke center me palce ho jayengi   */
+    /* align-items: stretch ; */
+    /*strech  use krne se saare element parent container ke barabar strech ho jaate hai */
+    /* align-items:baseline ; */
+    /*   baseline use krne se agar hamare saare element ka size alag alag hai to vo sab ek base line me ajate  hai nhi to  sab element ka base line
+     alag alag hota hai*/
+
+    /* align item ki default value strech hoti hai */
+/* align items cross axis ya vertical axis ke upar apply hoti hai  aur cross axis me elements ko align krta hai*/
+
+
+
+/* ek question agar hame saara content center me lana hai to hum justify-content ko center rakheenge aur Align items ko bhi center me rakhenge jisse 
+hamar content main axis(x) aur cross axis(y) dono se center me ajaye*/
+justify-content: center;
+align-items:center ;
+/* agar har element ke beech me gap laane ke liye gap ka us ekete hai */
+/* gap: 10px; */
+/* gap bhi hum row iwse aur column wise krsakte hai  rowgap aur column gap use krke*/
+align-content:flex-start ;
+align-content: flex-end;
+align-content: center;
+align-content: space-between;
+align-content: space-around;
+align-content: space-evenly;
+/* jitni  bhi apki flex item ki rows ban rhi hai usne ke beec hg me sp[acing krta hai  */
+
+/* multiple row ke beech me  jo spaving hai usko handle krna hai to hum  align content ka use krte hai*/
+
+}  
+.box{
+    border: 1px solid brown ;
+    background-color: aqua;
+    width: 50px;
+     flex-basis: 100px; 
+     /* flex basis or width dono use krne se width badhti hai par width use krne par content agar overflow ho jaye to vo  trim ho jjata hai flex basis me vo content overflow nhi hota  */
+}
+
+
+/* flex items propeties
+-order-> it is used to order the flex items or child elements
+-flex-grow-> flex grow se element ka width badh jata hai default valuye of flex grow is 0 flex-grow:1;
+-flex-shrink-> isse hum kisi bhi element ya box ki shrinking speed set kr skate hai default flex shrink ;1: hoti hai
+-flex-basis-> flex basis se flex item ki width increase ho jaai hai 
+-flex-> flex ek short hand noation hai jisse hum order,flex grow , flex shrink ,flex basis sab ek sath use krsakte hai like--flex: 3,4,2,120px;
+align-self-> koi bhi flex item koo agar align krna hai right me left me center me to align self ka use krtre hai */
+#box1{
+    order: 1;
+    /* flex: 3,4,2,120px; */
+ /* flex-grow:1 ; */
+ /* flex grow id me lagya to sirf jis element ki id box1 hai uska width badhega agar class me lagate to saare element ka width badh jata */
+
+}
+#box3{
+    order: 5;
+    /* flex-shrink: 2; */
+}
+#box2{
+    order: 2;
+    /* flex: 3,4,2,120px; */
+    /* flex-shrink: 4; */
+}
