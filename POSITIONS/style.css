@@ -1,0 +1,32 @@
+/* p{
+    position: static;
+} */
+div{
+    display: inline-block;
+    width:150px;
+    height:150px;
+    background-color: aqua;
+    border: 1px solid black;
+
+}
+#box3{
+    position: relative;
+    /* relative positioning me hum orginl position ke respect me changes krte hai */
+    top: 100px;
+    left: 75px;
+}
+#box1{
+    position: fixed ;
+    /* an element wih position fixed is positioned relative to view port whichmeans it always stays in the same place even if the page is scrolled the top,right,bottom,and left properties are used to position the elment  */
+
+}
+.wrapper{
+    width: 100vw;
+    height: 2000px;
+    background-color: green;
+}
+#box4{
+    position: sticky;
+    top: 0px;
+    /* A sticky element toggles between relative and fixed ,depending on the scroll position it is positioned relative unntil  a given offset position is met in the viewport then it "sticks" in the place (like position:fixed). */
+}
