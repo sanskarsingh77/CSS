@@ -1,0 +1,57 @@
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box; 
+}
+
+.container{
+    background-color: green;
+    height: 500px;
+    border: 3px solid black;
+    display:grid ;
+    /* grid lagane se inke beech me spacing ajati hai */
+    /* grid-template-columns: 200px 200px 210px; */
+    /*  grid-template-columns: 200px 200px 210px; yeh line likhne ka shortcu hai gtc likh do bs
+    to add coloumns  we use above line add give dimension jitni hame column cahiye jaise isme hame 3 column cahiye to 200px 200px 210px likha hai */
+   /* grid-template-columns: 1fr 1fr 1fr; */
+    /* fr is for fraction fr se 3 equal column ban jayenge */
+    grid-template-columns:  repeat(3,1fr); 
+    /* reapeat ke baad bracket me pehle kitni baar likhna hai aur uske baad commma ke kya likhna hai to  bhi same output ayega jo pehle arha tha */
+    /* grid-template-columns:100px repeat(3,1fr);  */
+    /* upar vali line ka mtlb hai pehl;la column 100 px ka uske baad ke 3 column 1fr ke */
+    /* grid-template-rows: 90px 90px 90px; */
+ /* this is used to add row in grid */
+ grid-template-rows:  30px 1fr 30px;
+ gap: 3px;
+ /column ke beech me gap laane ke liye gap use kiya hai
+}
+.box{
+    background-color:aqua;
+    border: 3px solid black;
+    /* width: 80px; */
+    /* height: 80px; */
+
+}
+ /* #box1{
+    grid-column-start:1 ;
+    abhi width nhi badhi kyoki hame width pehle hi upr set kr di thi  usko comment krna hoga
+    isme column 1 3 column tak gya hai iski wajah se ek column aage shift ho gya sab
+     grid-column-end: 3;
+}
+#box3{
+    grid-row-start: 2;
+    grid-row-end: 4;
+    abhi bhi row nhi expand hui hogi kyoki abhi hamne upar height de rakhi hai uskob pehlr comment krna hoga 
+    grid-row: 2 span 4;
+    grid-row grid row start aur grid row end ka short hand notation hai
+ }  */
+#box1,#box4{
+    /* grid-column-start: 1;
+    grid-column-end: 4; */
+    grid-column: 1 / span 4;
+    /* grid column short hand notation hai grid column start aur grid column end ka
+     */
+
+
+}
+   
