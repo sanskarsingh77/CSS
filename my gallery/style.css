@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  /* box-sizing: border-box; taki jab hum border aur padding add kre to apne content ka size chota ho jaye lekin box ka size chota na ho*/
+}
+  #wrapper{
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  .container{
+    height: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+     /* margin: 0 auto; se aise hota hai left side aur right se aise margin lagya jaye ke apka content center me ajye   */
+    padding: 20px;
+    }
+    .container h1{ 
+        /* .conatiner h1 is line ka mtlb hai ke contaainer ke andar jo h1 tag hai uski baat ho rhi hai */
+        margin: 20px 0;
+        /* ***********margin shirthand notations*********** */
+        /* The margin property is a shorthand property for the following individual margin properties:
+
+          margin-top
+           margin-right
+           margin-bottom
+           margin-left
+          So, here is how it works:
+
+          If the margin property has four values:
+
+          margin: 25px 50px 75px 100px;
+          top margin is 25px 
+          right margin is 50px
+          bottom margin is 75px
+          left margin is 100px */
+
+        /* If the margin property has two values:
+        margin: 25px 50px;
+        top and bottom margins are 25px
+        right and left margins are 50px  */
+
+        /* If the margin property has one value:
+
+         margin: 25px;
+         all four margins are 25px */
+
+
+      text-align: center;
+      margin-bottom: 20px;
+      /* bottom ka margin hamne alag diya nhi to ham upar jaise margin: 20px 0 ; top aur right ki di yaha hum tesri value de dete to bottom margin ki value ho jaati aur chauthi value de dete to right margin ki value ho jaati yeh sab margin ki short hand notation hai */
+      font-size: 3rem;
+    }
+    .gallery{
+      display: flex;
+      flex-wrap: wrap;
+      /* flex-wrap:wrap; use  krne se jo images horizontal axis me bagal bagal me lagti thi vo vertical axis mee ek ke niche ek agyi  */
+      justify-content: space-between;
+      }
+      .card{
+        width: 32%;
+        position: relative;
+        margin-bottom: 20px;
+        border-radius: 10px;
+        /* The border-radius CSS property rounds the corners of an element's outer border edge. You can set a single radius to make circular corners, or two radii to make elliptical corners */
+        overflow: hidden;
+      }
+      .card img{
+          width: 100%;
+          /* width 100% ka mtlb jo img ke parent element(card) ki width hai vo hi kr do iski bhi */
+          height: 100%;
+          /* height 100% ka mtlb jo img ke parent element(card) ki height hai vo hi kr do iski bhi varnaa card ki border round upar kr diye aur image ki height nhi denge to iske border sharp rhenge height 1005 se img ke parent element(card) ke height resemble ho jayegi  */
+          filter: grayscale(100%);
+          /* filter: grayscale(100%); isse hamari saari imge black and white ho gyi */
+          box-shadow: 0 0 20px #333;
+          object-fit: cover;
+        }
+        
+        .card :hover{
+          transform: scale(1.03);
+          filter: drop-shadow(0 0 10px #333);
+          /* dropshadow applies a drop shadow effect to the input image */
+          /* jaise hi hum hover kre to ek shadow ajaye uske liye dropshadow use kiya */
+          transition-duration: 0.5s;
+        }
+         
+        .card :hover img{
+          filter: grayscale(0%);
+        }
+
+        .card figcaption{
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          padding: 20px;
+          width: 100%;
+          /* width 100% hai parent element ke respect me aur height bhi 20% hai parent element(card) ke respect me */
+          height: 20%;
+          font-size: 16px;
+          font-weight: 500;
+          color: #fff;
+          opacity: 0;
+          border-radius: 0 0 10px 10px;
+          background: linear-gradient(0deg, rgba(0,0,0,0.5),rgba(255,255,255,0)100% );
+          transition: 0.5s;
+        }
+      .card :hover figcaption{
+        opacity: 1;
+        transform: scale(1.03);
+      }
